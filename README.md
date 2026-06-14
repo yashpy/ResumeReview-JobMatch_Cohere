@@ -1,19 +1,44 @@
 # Resume Review + Job Match Copilot
 
-A Vercel-ready Next.js + TypeScript app that helps users upload a resume, paste a job description, and get a match analysis with keyword gaps, a score, and rewrite suggestions.
+A Vercel-ready Next.js + TypeScript application that helps users upload a resume, paste a job description, and receive an AI-assisted fit analysis.
 
 ## Features
 - Resume PDF upload
 - Job description input
-- Keyword/skill gap analysis
-- Match score and explanation
-- Actionable bullet rewrite suggestions
-- Cohere-ready integration points
+- Keyword and skill gap analysis
+- Match score and strengths summary
+- Bullet rewrite suggestions
+- Cohere-powered analysis with fallback scoring
 
-## Getting Started
-1. Install dependencies
-2. Set your environment variables
-3. Run the dev server
+## Tech Stack
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Cohere API
+- Vercel
 
-## Deployment
-This project is structured for deployment on Vercel.
+## Local Development
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Create a `.env.local` file:
+   ```bash
+   COHERE_API_KEY=your_cohere_api_key
+   ```
+3. Run the dev server:
+   ```bash
+   npm run dev
+   ```
+4. Open `http://localhost:3000`
+
+## Deploying to Vercel
+1. Push the repository to GitHub.
+2. Import the repository into Vercel.
+3. Add the following environment variable in the Vercel dashboard:
+   - `COHERE_API_KEY`
+4. Deploy the project.
+
+## Notes
+- If `COHERE_API_KEY` is missing, the app falls back to built-in keyword scoring.
+- The app is designed to be simple, recruiter-friendly, and easy to extend.
